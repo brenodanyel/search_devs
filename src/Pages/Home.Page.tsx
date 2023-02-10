@@ -11,7 +11,7 @@ export function Home() {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const search = formData.get('search');
-    navigate(`/search?q=${search}`);
+    navigate(`/${search}`);
   }
 
   return (
@@ -32,6 +32,7 @@ export function Home() {
               <TextField
                 label="Search"
                 name="search"
+                autoComplete="off"
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
@@ -47,6 +48,6 @@ export function Home() {
           </Grid>
         </Stack>
       </form>
-    </Container >
+    </Container>
   );
-};;;
+};
