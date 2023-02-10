@@ -25,7 +25,7 @@ _____
 ## Tecnologias Utilizadas
 - React
 - TypeScript
-- MUI (Material UI)
+- MUI (Material UI - escolhido por maior afinidade)
 - Axios
 - React Router DOM
 
