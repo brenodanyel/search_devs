@@ -6,7 +6,6 @@ import { useSearchResult } from './Hooks/useSearchResult';
 import { Repository, User } from './Types/SearchResult.types';
 import { UserProfile } from './Components/UserProfile';
 import { UserProfileSkeleton } from './Components/UserProfileSkeleton';
-import toast from 'react-hot-toast';
 import { UserRepositories } from './Components/UserRepositories';
 import { UserRepositoriesSkeletons } from './Components/UserRepositories/UserRepositoriesSkeleton';
 
@@ -36,10 +35,6 @@ export function SearchResult() {
 
     if (userResult.status === 'fulfilled') {
       setUser(userResult.value);
-
-      if (!userResult.value) {
-        toast.error('Usuário não encontrado');
-      }
     }
 
     if (repositoriesResult.status === 'fulfilled') {
